@@ -123,7 +123,7 @@ let orders = [
 ];
 
 let kdv = 1.18;
-let student = new Array();
+let totalAmounts = new Array();
 let orderIds = new Array();
 
 console.log("-------Total Amount Paid Including KDV for Each Order-------");
@@ -138,14 +138,14 @@ for (let i = 0; i < orders.length; i++) {
     "Total amount paid for order with ID " + orders[i].id + " = " + totalWithVAT
   );
 
-  student[i] = totalWithVAT;
+  totalAmounts[i] = totalWithVAT;
   orderIds[i] = orders[i].id;
 }
 
 console.log("\n-------Total Amount Paid Including KDV for All Orders-------");
 console.log("Order IDs: " + orderIds);
 let totalAmount = 0;
-for (let x = 0; x < student.length; x++) {
-  totalAmount += student[x];
+for (let x = 0; x < totalAmounts.length; x++) {
+  totalAmount += totalAmounts[x];
 }
 console.log("Total amount paid for all orders = " + totalAmount);
