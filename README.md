@@ -1,6 +1,6 @@
 # E-Commerce Application
 
-This example represents a JavaScript-based application that simulates an e-commerce platform. The application manages products, customers, and orders, and calculates the total amount for each order, including KDV (Value Added Tax).
+This example represents a TypeScript-based application that simulates an e-commerce platform. The application manages products, customers, and orders, and calculates the total amount for each order, including KDV (Value Added Tax).
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@ This example represents a JavaScript-based application that simulates an e-comme
 
 ## Introduction
 
-This code example demonstrates the structure of an e-commerce application with JavaScript. It contains data for products, customers, and orders, and it calculates the total amount paid for each order, considering a KDV rate of 20%.
+This code example demonstrates the structure of an e-commerce application with TypeScript. It contains data for products, customers, and orders, and it calculates the total amount paid for each order, considering a KDV rate of 20%.
 
 ## Data Structure
 
@@ -31,7 +31,13 @@ The code calculates the total amount paid for each order, including KDV. It then
 
 ### Usage
 
-To use this code, you can copy it into your JavaScript environment and run it. It will display the total amount paid, including KDV, for each order, as well as the total amount for all orders.
+```bash
+cd e-commerce-json
+```
+
+```bash
+npx ts-node main.ts
+```
 
 ### Contributing
 

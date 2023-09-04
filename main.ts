@@ -1,4 +1,36 @@
-let products = [
+interface Product {
+  id: number;
+  title: string;
+  url: string;
+  price: number;
+}
+
+interface Customer {
+  id: number;
+  name: string;
+  surname: string;
+  address: string;
+  district: string;
+  city: string;
+}
+
+interface Seller {
+  id: number;
+  company: string;
+}
+
+interface Order {
+  id: number;
+  customer: number;
+  seller: number;
+  date: Date;
+  payment: string;
+  shipping_address: string;
+  purchased_items: number[];
+  total_price: number[];
+}
+
+const products: Product[] = [
   {
     id: 5,
     title: "iPhone 13 Pro",
@@ -11,17 +43,27 @@ let products = [
     url: "https://abc.com/iphone-13-pro-max",
     price: 25000,
   },
-<<<<<<< HEAD
-  { id: 7, title: "iPhone X", url: "https://abc.com/iphone-x", price: 10000 },
-  { id: 8, title: "iPhone SE", url: "https://abc.com/iphone-se", price: 8000 },
-=======
-  { id: 7, title: "iphone x", url: "https://abc.com/iphone-x", price: 10000 },
-  { id: 8, title: "iphone se", url: "https://abc.com/iphone-se", price: 8000 },
-  { id: 9, title: "iphone 12", url: "https://abc.com/iphone-12", price: 15000 },
->>>>>>> 79b53b266b44295108f11c886de12d65c7f8a369
+  {
+    id: 7,
+    title: "iPhone X",
+    url: "https://abc.com/iphone-x",
+    price: 10000,
+  },
+  {
+    id: 8,
+    title: "iPhone SE",
+    url: "https://abc.com/iphone-se",
+    price: 8000,
+  },
+  {
+    id: 9,
+    title: "iPhone 12",
+    url: "https://abc.com/iphone-12",
+    price: 15000,
+  },
 ];
 
-let customers = [
+const customers: Customer[] = [
   {
     id: 12,
     name: "Berkay",
@@ -64,7 +106,7 @@ let customers = [
   },
 ];
 
-let sellers = [
+const sellers: Seller[] = [
   { id: 34, company: "Textile Plus Ltd." },
   { id: 35, company: "Software Path Inc." },
   { id: 36, company: "Studio81 Ltd." },
@@ -74,7 +116,7 @@ let sellers = [
 
 let orderDate = new Date();
 
-let orders = [
+const orders: Order[] = [
   {
     id: 101,
     customer: customers[0].id,
@@ -120,21 +162,16 @@ let orders = [
     customer: customers[4].id,
     seller: sellers[4].id,
     date: (orderDate = new Date(2023, 4, 15)),
-    payment: "prepaid",
-    shipping_address:
-      customers[4].address +
-      " " +
-      customers[4].district +
-      " " +
-      customers[4].city,
+    payment: "Prepaid",
+    shipping_address: `${customers[4].address} ${customers[4].district} ${customers[4].city}`,
     purchased_items: [products[2].id, products[3].id],
     total_price: [products[2].price, products[3].price],
   },
 ];
 
-let kdv = 1.20;
-let totalAmounts = [];
-let orderIds = [];
+const kdv = 1.2;
+const totalAmounts: number[] = [];
+const orderIds: number[] = [];
 
 console.log("------- Total Amount Paid Including KDV for Each Order -------");
 for (let i = 0; i < orders.length; i++) {
@@ -143,7 +180,7 @@ for (let i = 0; i < orders.length; i++) {
   for (let j = 0; j < orders[i].total_price.length; j++) {
     totalPrice += orders[i].total_price[j];
   }
-  let totalWithKDV = totalPrice * kdv;
+  const totalWithKDV = totalPrice * kdv;
   console.log(
     `Order ID: ${orders[i].id}, Total Amount Paid (with KDV): ${totalWithKDV}`
   );
