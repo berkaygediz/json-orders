@@ -1,0 +1,11 @@
+{
+  "name": "e-commerce-json",
+  "version": "1.0.0",
+  "description": "This example represents a TypeScript-based application that simulates an e-commerce platform. The application manages products, customers, and orders, and calculates the total amount for each order, including KDV (Value Added Tax).",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "berkaygediz",
+  "license": "ISC"
+}
