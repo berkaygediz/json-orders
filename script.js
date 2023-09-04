@@ -11,8 +11,14 @@ let products = [
     url: "https://abc.com/iphone-13-pro-max",
     price: 25000,
   },
+<<<<<<< HEAD
   { id: 7, title: "iPhone X", url: "https://abc.com/iphone-x", price: 10000 },
   { id: 8, title: "iPhone SE", url: "https://abc.com/iphone-se", price: 8000 },
+=======
+  { id: 7, title: "iphone x", url: "https://abc.com/iphone-x", price: 10000 },
+  { id: 8, title: "iphone se", url: "https://abc.com/iphone-se", price: 8000 },
+  { id: 9, title: "iphone 12", url: "https://abc.com/iphone-12", price: 15000 },
+>>>>>>> 79b53b266b44295108f11c886de12d65c7f8a369
 ];
 
 let customers = [
@@ -48,6 +54,14 @@ let customers = [
     district: "XX",
     city: "YY",
   },
+  {
+    id: 16,
+    name: "Hasan",
+    surname: "Kediz",
+    address: "W St.",
+    district: "XX",
+    city: "YY",
+  },
 ];
 
 let sellers = [
@@ -55,6 +69,7 @@ let sellers = [
   { id: 35, company: "Software Path Inc." },
   { id: 36, company: "Studio81 Ltd." },
   { id: 38, company: "96Atelier Ltd." },
+  { id: 39, company: "Spacecode Ltd." },
 ];
 
 let orderDate = new Date();
@@ -99,6 +114,21 @@ let orders = [
     shipping_address: `${customers[3].address} ${customers[3].district} ${customers[3].city}`,
     purchased_items: [products[1].id, products[3].id],
     total_price: [products[1].price, products[3].price],
+  },
+  {
+    id: 105,
+    customer: customers[4].id,
+    seller: sellers[4].id,
+    date: (orderDate = new Date(2023, 4, 15)),
+    payment: "prepaid",
+    shipping_address:
+      customers[4].address +
+      " " +
+      customers[4].district +
+      " " +
+      customers[4].city,
+    purchased_items: [products[2].id, products[3].id],
+    total_price: [products[2].price, products[3].price],
   },
 ];
 
