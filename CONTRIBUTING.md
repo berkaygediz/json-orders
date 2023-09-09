@@ -8,7 +8,7 @@ Thank you for considering contributing to the **E-Commerce JSON** project! Your 
 2. Clone the forked repository to your local machine:
 
    ```
-   git clone https://github.com/berkaygediz/e-commerce-application.git
+   git clone https://github.com/berkaygediz/e-commerce-json.git
    ```
 
 3. Create a new branch for your changes:
@@ -37,4 +37,4 @@ Please follow the existing code style and conventions in the project.
 
 ## Reporting Issues
 
-If you encounter a bug, have a suggestion, or want to discuss an improvement, please [open an issue](https://github.com/berkaygediz/e-commerce-application/issues) on GitHub.
+If you encounter a bug, have a suggestion, or want to discuss an improvement, please [open an issue](https://github.com/berkaygediz/e-commerce-json/issues) on GitHub.
